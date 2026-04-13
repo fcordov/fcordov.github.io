@@ -102,26 +102,6 @@
 
   /* BIO */
   .bio p { margin-bottom: 16px; font-size: 1rem; }
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 32px;
-  }
-  .edu-item, .award-item {
-    margin-bottom: 18px;
-  }
-  .edu-item .degree { font-weight: 500; }
-  .edu-item .institution, .award-item .title {
-    font-style: italic;
-    color: var(--mid);
-    font-size: 0.93rem;
-  }
-  .edu-item .year, .award-item .year {
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    color: var(--light);
-  }
 
   /* PUBLICATIONS & RESEARCH */
   .pub-list {
@@ -231,7 +211,6 @@
 
   @media (max-width: 580px) {
     body { padding: 36px 20px 80px; }
-    .two-col { grid-template-columns: 1fr; gap: 24px; }
     nav a { padding: 8px 12px 8px 0; margin-right: 8px; font-size: 0.7rem; }
     .teach-row { flex-direction: column; gap: 2px; }
     .teach-row .meta { text-align: left; }
@@ -260,12 +239,22 @@
   <a href="#" onclick="show('electronics',this)">Electronics</a>
 </nav>
 
-<!-- BIO -->
+<!-- BIO - CV LINK RESTORED -->
 <section id="bio" class="visible">
   <h2>About</h2>
   <div class="bio">
     <p>As Head of the Prospective Risk Analysis Department at the Central Bank of Chile, I have over 15 years of experience in leading and conducting macroeconomic and macrofinancial risk assessments for the Chilean economy. I apply my skills in applied methods to analyze and research topics such as credit markets, household finance, macroprudential policy, mortgage markets, climate change and financial stability in general.</p>
     <p>I also contribute with policy insights to the Financial Stability Report and Financial Policy Meetings, where the Bank's board discusses and decides on the macroprudential policy stance. I coordinate the research agenda of my department and collaborate with other areas and external partners on projects and initiatives that support the Bank's mission and vision. I value teamwork, innovation, and excellence, and I strive to bring diverse perspectives and experiences to my work.</p>
+    
+    <!-- CV Link restored here -->
+    <p style="margin: 28px 0 20px;">
+      <a href="https://drive.google.com/file/d/1rsazW6-ZaFKnOQht_bH89fgmC8UCnA5G/view?usp=drive_link" target="_blank" 
+         style="color:var(--mid); font-family:var(--mono); font-size:0.85rem; 
+                border-bottom:1px solid var(--rule); text-decoration:none; 
+                transition:color 0.15s, border-color 0.15s;">
+        ↓ Download full Curriculum Vitae (PDF)
+      </a>
+    </p>
   </div>
 
   <div class="two-col" style="margin-top:40px;">
