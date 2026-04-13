@@ -26,7 +26,7 @@
     margin: 0 auto;
     padding: 64px 32px 120px;
   }
-  /* ── HEADER ─────────────────────────────────────────────── */
+  /* HEADER */
   header {
     border-bottom: 1px solid var(--black);
     padding-bottom: 28px;
@@ -59,7 +59,8 @@
     transition: color 0.15s, border-color 0.15s;
   }
   .contact-grid a:hover { color: var(--black); border-color: var(--black); }
-  /* ── NAV ─────────────────────────────────────────────────── */
+
+  /* NAV */
   nav {
     display: flex;
     gap: 0;
@@ -79,14 +80,15 @@
     transition: color 0.15s, border-color 0.15s;
   }
   nav a:hover, nav a.active { color: var(--black); border-bottom-color: var(--black); }
-  /* ── SECTIONS ────────────────────────────────────────────── */
+
+  /* SECTIONS */
   section {
     display: none;
     animation: fadeIn 0.25s ease;
   }
   section.visible { display: block; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-  /* ── SECTION HEADINGS ────────────────────────────────────── */
+
   h2 {
     font-size: 0.72rem;
     font-family: var(--mono);
@@ -97,7 +99,8 @@
     padding-bottom: 8px;
     border-bottom: 1px solid var(--rule);
   }
-  /* ── BIO SECTION ─────────────────────────────────────────── */
+
+  /* BIO */
   .bio p { margin-bottom: 16px; font-size: 1rem; }
   .two-col {
     display: grid;
@@ -108,22 +111,19 @@
   .edu-item, .award-item {
     margin-bottom: 18px;
   }
-  .edu-item .degree {
-    font-weight: 500;
-  }
-  .edu-item .institution,
-  .award-item .title {
+  .edu-item .degree { font-weight: 500; }
+  .edu-item .institution, .award-item .title {
     font-style: italic;
     color: var(--mid);
     font-size: 0.93rem;
   }
-  .edu-item .year,
-  .award-item .year {
+  .edu-item .year, .award-item .year {
     font-family: var(--mono);
     font-size: 0.75rem;
     color: var(--light);
   }
-  /* ── UNIFIED PUBLICATION / RESEARCH LIST (NO NUMBERING) ──── */
+
+  /* PUBLICATIONS & RESEARCH - FIXED AND CLEAN */
   .pub-list {
     list-style: none;
     padding: 0;
@@ -172,7 +172,8 @@
     margin-right: 4px;
     border-radius: 2px;
   }
-  /* ── EMPLOYMENT ──────────────────────────────────────────── */
+
+  /* EMPLOYMENT */
   .employment-item {
     padding: 18px 0;
     border-bottom: 1px solid var(--rule);
@@ -192,7 +193,8 @@
     font-size: 0.85rem;
     color: var(--mid);
   }
-  /* ── TEACHING ────────────────────────────────────────────── */
+
+  /* TEACHING */
   .teach-block { margin-bottom: 32px; }
   .teach-block .school {
     font-size: 0.8rem;
@@ -210,14 +212,8 @@
     border-bottom: 1px solid var(--rule);
     font-size: 0.93rem;
   }
-  .teach-row .course {}
-  .teach-row .meta {
-    color: var(--light);
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    text-align: right;
-  }
-  /* ── SKILLS / MISC ───────────────────────────────────────── */
+
+  /* MISC */
   .pill-row {
     display: flex;
     flex-wrap: wrap;
@@ -232,6 +228,7 @@
     border-radius: 2px;
     color: var(--mid);
   }
+
   @media (max-width: 580px) {
     body { padding: 36px 20px 80px; }
     .two-col { grid-template-columns: 1fr; gap: 24px; }
@@ -242,6 +239,7 @@
 </style>
 </head>
 <body>
+
 <header>
   <h1>J. Felipe Córdova</h1>
   <p class="subtitle">Economist · Central Bank of Chile</p>
@@ -262,19 +260,12 @@
   <a href="#" onclick="show('electronics',this)">Electronics</a>
 </nav>
 
-<!-- ── BIO ──────────────────────────────────────────────────── -->
+<!-- BIO -->
 <section id="bio" class="visible">
   <h2>About</h2>
   <div class="bio">
     <p>As Head of the Prospective Risk Analysis Department at the Central Bank of Chile, I have over 15 years of experience in leading and conducting macroeconomic and macrofinancial risk assessments for the Chilean economy. I apply my skills in applied methods to analyze and research topics such as credit markets, household finance, macroprudential policy, mortgage markets, climate change and financial stability in general.</p>
     <p>I also contribute with policy insights to the Financial Stability Report and Financial Policy Meetings, where the Bank's board discusses and decides on the macroprudential policy stance. I coordinate the research agenda of my department and collaborate with other areas and external partners on projects and initiatives that support the Bank's mission and vision. I value teamwork, innovation, and excellence, and I strive to bring diverse perspectives and experiences to my work.</p>
-    
-    <!-- CV Link - clean and matching your style -->
-    <p style="margin-top: 24px;">
-      <a href="https://drive.google.com/file/d/1rsazW6-ZaFKnOQht_bH89fgmC8UCnA5G/view?usp=drive_link" target="_blank" style="color: var(--mid); border-bottom: 1px solid var(--rule); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; transition: all 0.15s;">
-        ↓ Download full Curriculum Vitae (PDF)
-      </a>
-    </p>
   </div>
 
   <div class="two-col" style="margin-top:40px;">
@@ -356,8 +347,7 @@
   </div>
 </section>
 
-<!-- Publications, Research, Teaching, Misc, and Electronics sections remain exactly as you provided -->
-<!-- ── PUBLICATIONS ──────────────────────────────────────────── -->
+<!-- PUBLICATIONS - FIXED -->
 <section id="publications">
   <h2>Peer-Reviewed</h2>
   <ul class="pub-list">
@@ -397,8 +387,8 @@
       </div>
     </li>
   </ul>
-  <div style="margin-top:120px;">
-  <h2>Policy Work &amp; Institutional Publications</h2>
+
+  <h2 style="margin-top: 48px;">Policy Work &amp; Institutional Publications</h2>
   <ul class="pub-list">
     <li>
       <div class="pub-content">
@@ -424,7 +414,7 @@
     <li>
       <div class="pub-content">
         <span class="pub-title">Exposures to transition and physical risks in Chile</span>
-        <span class="pub-authors">with Toledo C. &amp; Vasquez F.</span>
+        <span class="pub-authors">with C. Toledo and F. Vasquez</span>
         <span class="pub-venue">Support note · Central Bank of Chile, FSR First Half 2022</span>
       </div>
     </li>
@@ -445,14 +435,203 @@
     <li>
       <div class="pub-content">
         <span class="pub-title">Impago y destrucción de empleo: una investigación empírica en base a pares empleado-empleador</span>
-        <span class="pub-authors">with Valencia M.I.</span>
+        <span class="pub-authors">with M.I. Valencia</span>
         <span class="pub-venue">Support note · Central Bank of Chile, FSR First Half 2020</span>
       </div>
     </li>
   </ul>
 </section>
 
-<!-- The rest of your sections (Research, Teaching, Misc, Electronics) are unchanged from what you sent last. -->
+<!-- RESEARCH -->
+<section id="research">
+  <h2>Working Papers &amp; Work in Progress</h2>
+  <ul class="pub-list">
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">House prices, entrepreneurship, and the cost of default</span>
+        <span class="pub-authors">Córdova, F.</span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Interest rate discrimination and default under imperfect information: an heterogeneous agents model</span>
+        <span class="pub-authors">Córdova, F.</span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Macroeconomic and financial responses under climate transition policies</span>
+        <span class="pub-authors">with L. Gonzales &amp; M. Gonzalez</span>
+        <span class="pub-venue">NGFS working paper</span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Calentamiento global y productividad en Chile: Efectos locales y sectoriales</span>
+        <span class="pub-authors">with Garcia-Silva P. &amp; Jimenez M.</span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Analyzing the direct physical impacts of wildfires in Chile: A firm-level study using administrative data with a focus on ecosystem services dependencies</span>
+        <span class="pub-authors">with E. Albagli, P. Araya, L. Gonzales, G. Garcia, J. Perez &amp; C. Toledo</span>
+        <span class="pub-venue">NGFS working paper</span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Climate transition risks in Chile's banking industry: A loan-level stress test</span>
+        <span class="pub-authors">Córdova, F., Pinto-Ávalos, F., &amp; Salas, M.</span>
+        <span class="pub-venue">DTBC 1070 · Central Bank of Chile, 2026 <a href="https://www.bcentral.cl/documents/33528/133326/Documento+de+Trabajo+1070.pdf" target="_blank">→ PDF</a></span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Assessing physical risk impact of climate change: A focus on Chile</span>
+        <span class="pub-authors">Córdova, F., García Silva, P., Natho, F., Perez, J., Salas, M. &amp; Vasquez, F.</span>
+        <span class="pub-venue">EEE 144 · Central Bank of Chile &amp; BIS IFC Bulletin, 2024 <a href="https://www.bis.org/ifc/publ/ifcb63.pdf" target="_blank">→ BIS PDF</a></span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Prices and tightness in the Chilean rental market</span>
+        <span class="pub-authors">with A. Cruces and S. Diaz</span>
+        <span class="pub-venue">DTBC 988 · Central Bank of Chile, 2023 <a href="https://www.bcentral.cl/documents/33528/133326/DTBC_988.pdf" target="_blank">→ PDF</a></span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Banks' business model and credit supply in Chile: The role of a state-owned bank</span>
+        <span class="pub-authors">Biron, M., Córdova, F., &amp; Lemus, A.</span>
+        <span class="pub-venue">BIS Working Paper 800, 2019 <a href="https://www.bis.org/publ/work800.htm" target="_blank">→ BIS</a></span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">The impact of warnings published in a financial stability report on loan-to-value ratios</span>
+        <span class="pub-authors">Alegría, A., Alfaro, R., &amp; Córdova, F.</span>
+        <span class="pub-venue">BIS Working Paper 633, 2017 <a href="https://www.bis.org/publ/work633.pdf" target="_blank">→ PDF</a></span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Conventional calibration versus EDF calibration</span>
+        <span class="pub-authors">Córdova, F.</span>
+        <span class="pub-venue">DTBC 589 · Central Bank of Chile, 2010 <a href="https://www.bcentral.cl/documents/33528/133326/DTBC_589.pdf" target="_blank">→ PDF</a></span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Passthrough of large monetary policy rate changes: Evidence for Chile</span>
+        <span class="pub-authors">Becerra, J.S., Ceballos, L., Córdova, F., &amp; Pedersen, M.</span>
+        <span class="pub-venue">DTBC 522 · Central Bank of Chile, 2009 <a href="https://ideas.repec.org/p/chb/bcchwp/522.html" target="_blank">→ link</a></span>
+      </div>
+    </li>
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Alternative underlying inflation measures for Chile</span>
+        <span class="pub-authors">Córdova, F., Grünwald, M.C., &amp; Pedersen, M.</span>
+        <span class="pub-venue">DTBC 471 · Central Bank of Chile, 2008 <a href="https://ideas.repec.org/p/chb/bcchwp/471.html" target="_blank">→ link</a></span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- TEACHING, MISC, ELECTRONICS remain the same as your original -->
+<section id="teaching">
+  <h2>Teaching</h2>
+  <div class="teach-block">
+    <div class="school">As Lecturer</div>
+    <div class="teach-row">
+      <span class="course">Quantitative Methods II <em style="color:var(--light);font-size:0.85rem;">(undergraduate)</em></span>
+      <span class="meta">University of Chile · Summer 2017</span>
+    </div>
+    <div class="teach-row">
+      <span class="course">Microeconomics <em style="color:var(--light);font-size:0.85rem;">(undergraduate)</em></span>
+      <span class="meta">Diego Portales University · Fall 2008</span>
+    </div>
+    <div class="teach-row">
+      <span class="course">Microeconomics <em style="color:var(--light);font-size:0.85rem;">(undergraduate)</em></span>
+      <span class="meta">University of Santiago · Spring 2007</span>
+    </div>
+  </div>
+  <div class="teach-block">
+    <div class="school">As Teaching Assistant — Boston University</div>
+    <div class="teach-row">
+      <span class="course">Macroeconomics (EC502) <em style="color:var(--light);font-size:0.85rem;">(graduate core)</em></span>
+      <span class="meta">Spring 2015</span>
+    </div>
+    <div class="teach-row">
+      <span class="course">Empirical Economics (EC203) <em style="color:var(--light);font-size:0.85rem;">(undergraduate, 2 sections)</em></span>
+      <span class="meta">Fall 2014</span>
+    </div>
+    <div class="teach-row">
+      <span class="course">Statistics for Economists (EC507) <em style="color:var(--light);font-size:0.85rem;">(graduate core)</em></span>
+      <span class="meta">Fall 2013</span>
+    </div>
+    <div class="teach-row">
+      <span class="course">Economic Development in Latin America (EC369) <em style="color:var(--light);font-size:0.85rem;">(undergraduate)</em></span>
+      <span class="meta">Fall 2013</span>
+    </div>
+  </div>
+  <div class="teach-block">
+    <div class="school">As Teaching Assistant — Chilean Universities</div>
+    <div class="teach-row">
+      <span class="course">Microeconomics <em style="color:var(--light);font-size:0.85rem;">(undergraduate)</em></span>
+      <span class="meta">Diego Portales University · Fall 2007</span>
+    </div>
+    <div class="teach-row">
+      <span class="course">Financial Econometrics <em style="color:var(--light);font-size:0.85rem;">(undergraduate)</em></span>
+      <span class="meta">University of Chile · Spring 2004</span>
+    </div>
+    <div class="teach-row">
+      <span class="course">Advanced Econometrics <em style="color:var(--light);font-size:0.85rem;">(undergraduate)</em></span>
+      <span class="meta">University of Chile · Spring 2003</span>
+    </div>
+    <div class="teach-row">
+      <span class="course">Econometrics <em style="color:var(--light);font-size:0.85rem;">(undergraduate)</em></span>
+      <span class="meta">University of Chile · Fall 2003</span>
+    </div>
+  </div>
+</section>
+
+<section id="misc">
+  <h2>Computer Skills</h2>
+  <div style="margin-bottom:10px;font-size:0.88rem;color:var(--mid);">Statistics</div>
+  <div class="pill-row">
+    <span class="pill">Stata</span>
+    <span class="pill">EViews</span>
+  </div>
+  <div style="margin-bottom:10px;font-size:0.88rem;color:var(--mid);">Programming</div>
+  <div class="pill-row">
+    <span class="pill">R</span>
+    <span class="pill">Python</span>
+    <span class="pill">MatLab</span>
+    <span class="pill">Gauss</span>
+    <span class="pill">Basic</span>
+    <span class="pill">LaTeX</span>
+  </div>
+  <div style="margin-top:36px;">
+    <h2 style="margin-bottom:18px;">Referee</h2>
+    <div class="pill-row">
+      <span class="pill">Latin American Journal of Central Banking</span>
+      <span class="pill">BCCh Working Paper Series</span>
+      <span class="pill">BCCh Studies in Economic Statistics</span>
+    </div>
+  </div>
+</section>
+
+<section id="electronics">
+  <h2>Electronics</h2>
+  <div class="ham">
+    <p>
+      When I have time to spare, I enjoy restoring and repairing vintage electronics,
+      including vacuum tube receivers and 8-bit computers from the 1970s and 1980s.
+      I am also a licensed amateur radio operator (<a href="https://www.qrz.com/db/CA3CFN" target="_blank">CA3CFN</a>),
+      often experimenting with DIY transceivers, propagation, digital modes and antenna designs.
+    </p>
+  </div>
+</section>
 
 <script>
   function show(id, el) {
