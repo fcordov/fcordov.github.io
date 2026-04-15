@@ -13,18 +13,28 @@
     --light: #888888;
     --rule: #cccccc;
     --bg: #ffffff;
+    --text: #111111;
     --serif: 'EB Garamond', Georgia, serif;
     --mono: 'Source Code Pro', monospace;
   }
+  [data-theme="dark"] {
+    --bg: #111111;
+    --text: #eeeeee;
+    --mid: #aaaaaa;
+    --light: #666666;
+    --rule: #444444;
+  }
+
   html { font-size: 17px; }
   body {
     background: var(--bg);
-    color: var(--black);
+    color: var(--text);
     font-family: var(--serif);
     line-height: 1.7;
     max-width: 760px;
     margin: 0 auto;
     padding: 64px 32px 120px;
+    transition: background 0.4s, color 0.4s;
   }
 
   /* HEADER */
@@ -59,7 +69,7 @@
     border-bottom: 1px solid var(--rule);
     transition: color 0.15s, border-color 0.15s;
   }
-  .contact-grid a:hover { color: var(--black); border-color: var(--black); }
+  .contact-grid a:hover { color: var(--text); border-color: var(--text); }
 
   /* NAV */
   nav {
@@ -80,7 +90,7 @@
     border-bottom: 2px solid transparent;
     transition: color 0.15s, border-color 0.15s;
   }
-  nav a:hover, nav a.active { color: var(--black); border-bottom-color: var(--black); }
+  nav a:hover, nav a.active { color: var(--text); border-bottom-color: var(--text); }
 
   /* SECTIONS */
   section {
@@ -112,9 +122,7 @@
   .edu-item, .award-item {
     margin-bottom: 18px;
   }
-  .edu-item .degree {
-    font-weight: 500;
-  }
+  .edu-item .degree { font-weight: 500; }
   .edu-item .institution,
   .award-item .title {
     font-style: italic;
@@ -164,19 +172,7 @@
     letter-spacing: 0.04em;
     margin-left: 6px;
   }
-  .pub-content a:hover { color: var(--black); border-color: var(--black); }
-  .pub-tag {
-    display: inline-block;
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border: 1px solid var(--rule);
-    color: var(--light);
-    padding: 1px 6px;
-    margin-right: 4px;
-    border-radius: 2px;
-  }
+  .pub-content a:hover { color: var(--text); border-color: var(--text); }
 
   /* EMPLOYMENT */
   .employment-item {
@@ -234,16 +230,37 @@
     color: var(--mid);
   }
 
+  /* Theme Toggle - discrete upper right */
+  #theme-toggle {
+    position: fixed;
+    top: 28px;
+    right: 32px;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--mid);
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.2s;
+  }
+  #theme-toggle:hover {
+    border-color: var(--text);
+    color: var(--text);
+  }
+
   @media (max-width: 580px) {
     body { padding: 36px 20px 80px; }
     .two-col { grid-template-columns: 1fr; gap: 24px; }
     nav a { padding: 8px 12px 8px 0; margin-right: 8px; font-size: 0.7rem; }
-    .teach-row { flex-direction: column; gap: 2px; }
-    .teach-row .meta { text-align: left; }
+    #theme-toggle { top: 20px; right: 20px; font-size: 0.68rem; }
   }
 </style>
 </head>
 <body>
+
+<button id="theme-toggle">Dark Mode</button>
 
 <header>
   <h1>J. Felipe Córdova</h1>
@@ -265,25 +282,24 @@
   <a href="#" onclick="show('electronics',this)">Electronics</a>
 </nav>
 
-<!-- BIO with CV link -->
+<!-- BIO -->
 <section id="bio" class="visible">
   <h2>About</h2>
   <div class="bio">
-    <p>As Head of the Prospective Risk Analysis Department at the Central Bank of Chile, I have over 15 years of experience in leading and conducting macroeconomic and macrofinancial risk assessments for the Chilean economy. I apply my skills in applied methods to analyze and research topics such as credit markets, household finance, macroprudential policy, mortgage markets, climate change and financial stability in general.</p>
-    <p>I also contribute with policy insights to the Financial Stability Report and Financial Policy Meetings, where the Bank's board discusses and decides on the macroprudential policy stance. I coordinate the research agenda of my department and collaborate with other areas and external partners on projects and initiatives that support the Bank's mission and vision. I value teamwork, innovation, and excellence, and I strive to bring diverse perspectives and experiences to my work.</p>
+    <p>As Head of the Prospective Risk Analysis Department at the Central Bank of Chile, I bring over 15 years of experience leading macroeconomic and macrofinancial risk assessments for the Chilean economy.</p>
     
-    <!-- CV Link restored -->
+    <p>I specialize in credit markets, household finance, macroprudential policy, mortgage markets, and the intersection of climate change with financial stability. I also provide policy insights to the Financial Stability Report and contribute to the Bank's Financial Policy Meetings, where the Board sets the macroprudential stance. In addition, I coordinate my department’s research agenda and collaborate with internal teams and external partners on projects that advance the Bank’s mission.</p>
+
     <p style="margin: 28px 0 20px;">
-      <a href="https://drive.google.com/file/d/1rsazW6-ZaFKnOQht_bH89fgmC8UCnA5G/view?usp=drive_link" target="_blank" 
-         style="color:var(--mid); font-family:var(--mono); font-size:0.85rem; 
-                border-bottom:1px solid var(--rule); text-decoration:none; 
+      <a href="https://drive.google.com/file/d/1rsazW6-ZaFKnOQht_bH89fgmC8UCnA5G/view?usp=drive_link" target="_blank"
+         style="color:var(--mid); font-family:var(--mono); font-size:0.85rem;
+                border-bottom:1px solid var(--rule); text-decoration:none;
                 transition:color 0.15s, border-color 0.15s;">
         ↓ Download full Curriculum Vitae (PDF)
       </a>
     </p>
   </div>
 
-  <!-- Education + Honors restored with proper two-col layout -->
   <div class="two-col" style="margin-top:40px;">
     <div>
       <h2 style="margin-bottom:18px;">Education</h2>
@@ -400,6 +416,17 @@
         <span class="pub-title">Inflación de bienes y servicios</span>
         <span class="pub-authors">Córdova, F., Grünwald, M.C., &amp; Magendzo, I.</span>
         <span class="pub-venue">Economía Chilena, Vol. 10(2), 2007 <a href="https://ideas.repec.org/a/chb/bcchni/v10y2007i2p81-86.html" target="_blank">→ link</a></span>
+      </div>
+    </li>
+  </ul>
+
+  <h2 style="margin-top:48px;">Book Chapter</h2>
+  <ul class="pub-list">
+    <li>
+      <div class="pub-content">
+        <span class="pub-title">Los precios de los combustibles líquidos a lo largo del país: posibles explicaciones</span>
+        <span class="pub-authors">Córdova, F. &amp; Gómez-Lobo, A.</span>
+        <span class="pub-venue">In S. Valdés &amp; M.T. Arellano (eds.), <i>El Mercado de los Combustibles Líquidos en Chile</i>, Pontificia Universidad Católica de Chile, 2006.</span>
       </div>
     </li>
   </ul>
@@ -553,7 +580,7 @@
   </ul>
 </section>
 
-<!-- TEACHING, SKILLS, ELECTRONICS (unchanged) -->
+<!-- TEACHING -->
 <section id="teaching">
   <h2>Teaching</h2>
   <div class="teach-block">
@@ -657,6 +684,24 @@
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
     el.classList.add('active');
   }
+
+  // Theme Toggle
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  function setTheme(theme) {
+    body.setAttribute('data-theme', theme);
+    toggleBtn.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    localStorage.setItem('theme', theme);
+  }
+
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
+
+  toggleBtn.addEventListener('click', () => {
+    const current = body.getAttribute('data-theme') || 'light';
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
 </script>
 </body>
 </html>
